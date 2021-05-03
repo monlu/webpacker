@@ -15,16 +15,14 @@ Gem::Specification.new do |s|
     "changelog_uri"   => "https://github.com/rails/webpacker/blob/v#{Webpacker::VERSION}/CHANGELOG.md"
   }
 
-  s.required_ruby_version = ">= 2.3.0"
+  s.required_ruby_version = ">= 2.3.7"
 
   s.add_dependency "activesupport", "= 3.2.22"
   s.add_dependency "railties",      "= 3.2.22"
   s.add_dependency "rack-proxy",    ">= 0.6.1"
   s.add_dependency "semantic_range", ">= 2.3.0"
 
-  s.add_development_dependency "bundler", ">= 1.3.0"
-  s.add_development_dependency "rubocop", "0.93.1"
-  s.add_development_dependency "rubocop-performance"
+  s.add_development_dependency "bundler", ">= 1.17.3"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- test/*`.split("\n")
