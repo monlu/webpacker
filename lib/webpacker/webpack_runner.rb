@@ -13,9 +13,14 @@ module Webpacker
         ["yarn", "webpack"]
       end
 
-      if ARGV.include?("--debug")
+      if @argv.include?("--debug-webpacker")
         cmd = [ "node", "--inspect-brk"] + cmd
-        ARGV.delete("--debug")
+        @argv.delete "--debug-webpacker"
+      end
+
+      if @argv.include?("--trace-deprecation")
+        cmd = [ "node", "--trace-deprecation"] + cmd
+        @argv.delete "--trace-deprecation"
       end
 
       cmd += ["--config", @webpack_config] + @argv
